@@ -1,6 +1,6 @@
 {
   "name": "axiom-components-build",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Brandwatch Axiom - Components",
   "main": "dist/index.js",
   "license": "UNLICENSED",

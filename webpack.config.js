@@ -1,4 +1,5 @@
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'production',
@@ -26,5 +27,8 @@ module.exports = {
         loader: "svg-inline-loader"
       }
     ]
-  }
+  },
+  plugins: [
+    new BundleAnalyzerPlugin({generateStatsFile: true, analyzerMode: 'disabled', statsFilename: 'build-report.json'})
+  ]
 };

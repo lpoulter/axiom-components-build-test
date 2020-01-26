@@ -4,6 +4,7 @@ import postcss from "rollup-plugin-postcss";
 import json from "@rollup/plugin-json";
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
+import svg from "rollup-plugin-svg";
 
 export default {
   input: "src/index.js",
@@ -39,6 +40,7 @@ export default {
         ]
       }
     }),
+    svg(),
     resolve(),
     postcss({
       plugins: []

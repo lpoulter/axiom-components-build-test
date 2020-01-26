@@ -4,11 +4,11 @@ import Base from "../Base/Base";
 import "./StatusBadge.css";
 
 const BADGE_MAP = {
-  alpha: require("./svgs/alpha.svg"),
-  beta: require("./svgs/beta.svg"),
-  internal: require("./svgs/internal.svg"),
-  new: require("./svgs/new.svg"),
-  prototype: require("./svgs/prototype.svg")
+  // alpha: require("./svgs/alpha.svg"),
+  // beta: require("./svgs/beta.svg"),
+  // internal: require("./svgs/internal.svg"),
+  // new: require("./svgs/new.svg"),
+  // prototype: require("./svgs/prototype.svg")
 };
 
 export default class StatusBadge extends Component {
@@ -20,6 +20,9 @@ export default class StatusBadge extends Component {
 
   render() {
     const { status, ...rest } = this.props;
+    if (!BADGE_MAP[status]) {
+      return null;
+    }
     const { body, height, viewBox, width } = BADGE_MAP[status];
 
     return (

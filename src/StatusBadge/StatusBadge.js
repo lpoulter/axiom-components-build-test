@@ -1,26 +1,21 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Base } from '@brandwatch/axiom-components';
-import './StatusBadge.css';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Base from "../Base/Base";
+import "./StatusBadge.css";
 
 const BADGE_MAP = {
-  alpha: require('./svgs/alpha.svg'),
-  beta: require('./svgs/beta.svg'),
-  internal: require('./svgs/internal.svg'),
-  new: require('./svgs/new.svg'),
-  prototype: require('./svgs/prototype.svg'),
+  alpha: require("./svgs/alpha.svg"),
+  beta: require("./svgs/beta.svg"),
+  internal: require("./svgs/internal.svg"),
+  new: require("./svgs/new.svg"),
+  prototype: require("./svgs/prototype.svg")
 };
 
 export default class StatusBadge extends Component {
   static propTypes = {
     /** Type of status the badge should display (determines wording and colouring) */
-    status: PropTypes.oneOf([
-      'alpha',
-      'beta',
-      'internal',
-      'new',
-      'prototype',
-    ]).isRequired,
+    status: PropTypes.oneOf(["alpha", "beta", "internal", "new", "prototype"])
+      .isRequired
   };
 
   render() {
@@ -28,13 +23,15 @@ export default class StatusBadge extends Component {
     const { body, height, viewBox, width } = BADGE_MAP[status];
 
     return (
-      <Base { ...rest }
-          Component="svg"
-          className="ax-status-badge"
-          dangerouslySetInnerHTML={ { __html: body } }
-          height={ height }
-          viewBox={ viewBox }
-          width={ width } />
+      <Base
+        {...rest}
+        Component="svg"
+        className="ax-status-badge"
+        dangerouslySetInnerHTML={{ __html: body }}
+        height={height}
+        viewBox={viewBox}
+        width={width}
+      />
     );
   }
 }

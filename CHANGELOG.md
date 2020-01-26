@@ -1,3 +1,20 @@
+# v0.0.3 (Sun Jan 26 2020)
+
+#### ⚠️  Pushed to master
+
+- Add Auto to manage release  ([@lpoulter](https://github.com/lpoulter))
+- 0.0.2  ([@lpoulter](https://github.com/lpoulter))
+- Update package name  ([@lpoulter](https://github.com/lpoulter))
+- 0.0.1  ([@lpoulter](https://github.com/lpoulter))
+- Add .env to git ignore  ([@lpoulter](https://github.com/lpoulter))
+- working build  ([@lpoulter](https://github.com/lpoulter))
+
+#### Authors: 1
+
+- Laurie Poulter ([@lpoulter](https://github.com/lpoulter))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

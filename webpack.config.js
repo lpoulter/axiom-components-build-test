@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve('dist'),
     filename: 'index.js',
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2',   
   },
   module: {
     rules: [
@@ -28,7 +28,10 @@ module.exports = {
       }
     ]
   },
+  externals: [
+    'react','react-dom'
+  ],
   plugins: [
-    new BundleAnalyzerPlugin({generateStatsFile: true, analyzerMode: 'disabled', statsFilename: 'build-report.json'})
+    new BundleAnalyzerPlugin({generateStatsFile: true, analyzerMode: 'disabled', statsFilename: 'build-report-b.json'})
   ]
 };
